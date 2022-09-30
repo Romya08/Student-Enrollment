@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <title>Registration Form</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Trirong", serif;
+}
+.container{
+    display: flex;
+    height: 110vh;
+    background: linear-gradient(rgb(106, 24, 160),rgb(105, 1, 83));
+    
+}
+.left{
+    background: white;
+    width: 40%;
+    margin: 4% 5%;
+    padding: 25px;
+    border-radius: 5px;
+    height: 610px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.left h1{
+    font-size: 20px;
+    padding: 5px 5px 5px 5px;
+}
+.input-box{
+    margin: 5px 0;
+    width: 90%;
+    padding: 5px;
+}
+.input-box .text-box{
+    height: 35px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+    font-size: 15px;
+    margin: 0 0 0 0;
+}
+.input-box2{
+    margin: 5px 0;
+    width: 90%;
+    padding: 5px;
+}
+input[type="file"]{
+    margin-top: 5px;
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    font-size: 15px;
+}
+input[type="radio"]{
+    margin: 0 5px;
+}
+input[type="checkbox"]{
+    margin: 10px 5px 5px 0;
+    cursor: pointer;
+}
+.block{
+    margin: 0 5px;
+    display: block;
+}
+.input-box .button{
+    height: 30px;
+    width: 100%;
+    border-radius: 5px;
+    border: 0;
+    background: linear-gradient(45deg, rgb(14, 18, 252),rgb(57, 189, 250));
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+.input-box .button:hover{
+    background: linear-gradient(45deg,rgb(57, 189, 250),rgb(14, 18, 252));
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.right{
+    background: rgb(237, 241, 206);
+    width: 40%;
+    margin: 4% 5%;
+    padding: 25px;
+    border-radius: 5px;
+    height: 610px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box{
+    background: rgb(238, 206, 223);
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.box .desc{
+    padding: 5% 10% 10% 5%;
+    text-align: center;
+}
+.box img{
+    height: 130px;
+}
+
+.box .head{
+    width: 100%;
+    height: 40px;
+    padding: 0 0 0 5%;
+    line-height: 40px;
+    background: rgb(4, 61, 107);
+    border-radius: 5px;
+}
+.box .head h2{
+    color: rgb(255, 237, 211);
+    text-shadow: 2px 2px 5px rgb(8, 8, 8);
+}
+.desc h2{
+    font-family: "Dank Mono", ui-monospace, monospace;
+  font-size: 8mm;
+  color: rgb(136, 0, 113);
+}
+.desc p{
+    font-family: "Dank Mono", ui-monospace, monospace;
+  font-size: 5mm;
+  color: rgb(0, 59, 27);
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="left">
+        <form>
+            <h1>Student Enrolment Form</h1>
+        <div class="input-box">
+            <label for="name">Name:</label>
+            <input type="text" name="name" placeholder="Enter Your Name" id="name" class="text-box">
+        </div>
+
+        <div class="input-box">
+            <label for="">Email:</label>
+            <input type="email" name="email" placeholder="example@gmail.com" id="email" class="text-box">
+        </div>
+
+        <div class="input-box">
+            <label for="">Image:</label>
+            <input type="file" name="image" id="image-input" class="image-box">
+        </div>
+
+        <div class="input-box">
+            <label for="">Age:</label>
+            <input type="number" name="age" placeholder="16+" id="age" class="text-box" min="16">
+        </div>
+
+        <div class="input-box2">
+            <label for="">Gender:</label>
+            <input type="radio" name="gender" id="gender1" value="Male"><span>Male</span>
+            <input type="radio" name="gender" id="gender2" value="Female"><span>Female</span>
+            <input type="radio" name="gender" id="gender3" value="Other"><span>Other</span>
+        </div>
+        <div class="input-box2">
+            <label for="">Skills:</label>
+            <label class="block"><input type="checkbox" name="skill" id="skill" value="Java">Java</label>
+            <label class="block"><input type="checkbox" name="skill" id="skill" value="Python">Python</label>
+            <label class="block"><input type="checkbox" name="skill" id="skill" value="HTML">HTML</label>
+            <label class="block"><input type="checkbox" name="skill" id="skill" value="JavaScript">JavaScript</label>
+        </div>
+        <div class="input-box">
+            <input type="button" value="Register" class="button" id="btn" onclick="AddRow()">
+        </div>
+        </form>
+
+    </div>
+    <div class="right">
+        <div class="box">
+            <div class="head">
+                <h2>Student Details</h2>
+            </div>
+        <div class="desc">
+            <img src="" alt="" id="display_img">
+            <h2> <span id="name1"></span></h2>
+            <p><span id="email1"></span></p>
+            <p><span id="age1"></span></p>
+            <p><span id="previewgender"></span></p>
+            <p><span id="skillprint"></span></p>
+        </div>
+    
+        </div>
+
+    </div>
+</div>
+<script>
+   function AddRow(){
+    var data1=document.getElementById("name").value;
+    var data2=document.getElementById("email").value;
+    var data3=document.getElementById("age").value;
+   
+
+// print radio values
+  
+    var radios = document.getElementsByName('gender');
+    for (var radio of radios)
+    {
+        if (radio.checked) {
+            document.getElementById("previewgender").innerHTML='Gender: '+radio.value;
+        }
+        
+    }
+
+// print checkbox value
+
+    var checks = document.getElementsByName('skill');
+    var str='';
+    for(i=0;i<3;i++)
+    {
+      if(checks[i].checked==true)
+    {
+      str+=checks[i].value+" ";
+    }
+    }
+    document.getElementById("skillprint").innerHTML=str;
+
+
+// print image file
+    var [img]=document.getElementById("image-input").files;
+          if(img.value!='')
+          {
+            display_img.src = URL.createObjectURL(img);
+          }
+          else
+          {
+            alert("No image is Selected");
+          }
+
+// print other values in form
+    document.getElementById("name1").innerHTML='Name: '+ data1;
+    document.getElementById("email1").innerHTML='Email: '+data2;
+    document.getElementById("age1").innerHTML='Age: '+data3;
+} 
+</script>
+</body>
+</html>
